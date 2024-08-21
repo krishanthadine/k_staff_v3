@@ -10,7 +10,6 @@ Color backgroundColor2 = Color.fromARGB(255, 228, 248, 255);
 Color black1 = Color(0xff2e2e2e);
 Color black2 = Color(0xff4e4e4e);
 Color black3 = Color(0xff6e6e6e);
-
 Color white1 = Color(0xffe2e2e2);
 Color white2 = Color(0xffc2c2c2);
 Color white3 = Color(0xffa2a2a2);
@@ -29,8 +28,5 @@ Color logodarkblue5 = Color(0xff084f6e);
 Color logogray = Color(0xff84a4b4);
 Color logogray2 = Color(0xff729bac);
 Color logogray3 = Color(0xff548499);
-
-// Color appliteBlue = Color.fromARGB(255, 18, 201, 233);
-
 Color appliteBlue = Color.fromARGB(255, 6, 101, 148);
 Color appliteBlue2 = Color.fromARGB(255, 49, 132, 255);

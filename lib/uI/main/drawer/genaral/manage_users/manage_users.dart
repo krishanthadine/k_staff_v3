@@ -47,6 +47,7 @@ class _ManageUsersState extends State<ManageUsers> {
     });
     List res = await CustomApi().manageUserScreen(
         context, Provider.of<ProviderS>(context, listen: false).bId);
+          print(res);
     setState(() {
       userList = res;
       isLoading = false;
@@ -59,6 +60,7 @@ class _ManageUsersState extends State<ManageUsers> {
       isLoading = true;
     });
     var brancheList = await CustomApi().userActiveBranches(context);
+  
 
     setState(() {
       userBranchList.addAll(brancheList);
@@ -230,15 +232,30 @@ class _ManageUsersState extends State<ManageUsers> {
                                                             color: black,
                                                             fontSize: 14.dp,
                                                           )),
-                                                      Text(
-                                                          'name:- ${userList[index]['staff_name']}',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            color:
-                                                                Colors.black87,
-                                                            fontSize: 12.dp,
-                                                          )),
+                                                      Row(mainAxisAlignment:  MainAxisAlignment.start,
+                                                        children: [
+                                                          Text(
+                                                              'Name:- ',
+                                                              style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight.bold,
+                                                                color:
+                                                                    Colors.black87,
+                                                                fontSize: 12.dp,
+                                                              )),
+                                                              Flexible(
+                                                                child: Text(
+                                                                                                                          '${userList[index]['staff_name']}',
+                                                                                                                          style: TextStyle(
+                                                                                                                            fontWeight:
+                                                                  FontWeight.w500,
+                                                                                                                            color:
+                                                                  Color.fromARGB(221, 48, 47, 47),
+                                                                                                                            fontSize: 12.dp,
+                                                                                                                          )),
+                                                              )
+                                                        ],
+                                                      ),
                                                       Text(
                                                           'User Name:- ${userList[index]['username']}',
                                                           style: TextStyle(

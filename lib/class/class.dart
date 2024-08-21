@@ -1,4 +1,4 @@
-// import 'package:awesome_dialog/awesome_dialog.dart';
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/uI/login_and_signup/login.dart';
@@ -8,9 +8,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:quickalert/quickalert.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
-
 import '../app_details/color.dart';
-
 class Navigation {
   Nav(BuildContext context, Widget page) {
     Navigator.push(
@@ -107,7 +105,6 @@ class CustomDialog {
       confirmBtnColor: Colors.green,
     );
   }
-
   appExit(BuildContext context, String title, String desc, VoidCallback onTap) {
     QuickAlert.show(
       onConfirmBtnTap: onTap,
@@ -120,7 +117,6 @@ class CustomDialog {
       confirmBtnColor: Colors.green,
     );
   }
-
   userLoginCheck(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.width;
@@ -232,7 +228,6 @@ class CustomDialog {
     );
   }
 }
-
 class RPSCustomPainterDark extends CustomPainter {
   @override
   void paint(

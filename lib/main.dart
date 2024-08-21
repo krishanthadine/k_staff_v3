@@ -2,21 +2,18 @@ import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_2/app_details/const.dart';
 import 'package:flutter_application_2/push_notification/push_notification.dart';
 import 'package:flutter_application_2/uI/splash/splash.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:provider/provider.dart';
-// import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
-// import 'package:zego_uikit_signaling_plugin/zego_uikit_signaling_plugin.dart';
 import 'provider/provider.dart';
 import 'uI/app_permission/app_permission.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  await notify().initNotifications();
+  // await Firebase.initializeApp();
+  // await notify().initNotifications();
   await AwesomeNotifications().initialize(
     null,
     [
